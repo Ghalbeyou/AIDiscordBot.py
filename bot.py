@@ -17,7 +17,7 @@ async def on_message(message):
         # get users id
         user_id = message.author.id
         try:
-            msg = requests.get(f"http://api.brainshop.ai/get?key={key}&bid={user_id}&msg={message.content}")
+            msg = requests.get(f"http://api.brainshop.ai/get?key={key}&uid={user_id}&msg={message.content}")
             msg = msg.json()
             msg = msg['cnt']
             if "Acobot Team" in msg:
